@@ -12,7 +12,7 @@
     <button id="sendMessage">Send</button>
 
     <script>
-        // Créer une connexion WebSocket
+        //  connexion WebSocket
         const socket = new WebSocket('ws://localhost:3000');
 
         // Gérer les messages reçus
@@ -21,7 +21,7 @@
             messages.value += `Server: ${event.data}\n`;
         };
 
-        // Envoyer un message au serveur lorsqu'on clique sur le bouton
+        // Envoyer un message au serveur
         document.getElementById('sendMessage').onclick = function() {
             const input = document.getElementById('messageInput');
             socket.send(input.value);
