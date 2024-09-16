@@ -11,7 +11,6 @@ server.on('connection', (socket) => {
     socket.send(`Server received: ${message}`);
   });
 
-
   socket.on('close', () => {
     console.log('Client disconnected');
   });
